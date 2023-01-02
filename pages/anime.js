@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import Headtitle from "../components/Headtitle";
 
 const watchlistArray = [
   {
@@ -26,6 +27,7 @@ const watchlistArray = [
 const anime = () => {
   return (
     <>
+        <Headtitle title="Anime watchlist - bass4nation.github.io" />
       <div>
         <h1>Anime watchlist</h1>
         <p>
