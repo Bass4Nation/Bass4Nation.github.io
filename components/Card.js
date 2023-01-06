@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 const Card = (props) => {
   const { title, text, image } = props;
@@ -6,7 +6,9 @@ const Card = (props) => {
     <div className="card">
         <h3>{title}</h3>
         <p>{text}</p>
-        <img src={image} alt="image" />
+        <Image src={image} alt="image" 
+        width="100" 
+        height={100}/>
     </div>
     );
 }

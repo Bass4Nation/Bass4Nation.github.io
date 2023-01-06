@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+import style from '../styles/Index.module.css'
 import Headtitle from '../components/Headtitle'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       <Headtitle title="Bass4Nation's portefolio site - bass4nation.github.io" />
-      <main className={styles.main}>
+      <main className={style.main}>
         <section>
           <h1>Hi, I&apos;m Bass4Nation and also Kristoffer S Søderkvist</h1>
           <p>
