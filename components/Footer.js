@@ -1,7 +1,9 @@
+import style from "../styles/Footer.module.css"
+
+
 const Footer = () => {
   return (
-    <footer>
-      <p>Footer</p>
+    <footer className={style.footer}>
       <p>
         E-mail: <a href="mailTo:bass4nation@gmail.com">bass4nation@gmail.com</a>
       </p>
@@ -11,7 +13,7 @@ const Footer = () => {
       <p>
         Github: <a href="https://github.com/Bass4Nation">Bass4Nation</a>
       </p>
-    </footer>
+    </footer >
   );
 };
 

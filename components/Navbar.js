@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import style from "../styles/Navbar.module.css";
 
 // This is the list of items in the navbar
@@ -9,7 +10,12 @@ const navItemList = [
   { name: "My Anime watchlist", href: "/anime" },
 ];
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
+
+  // useEffect(() => {
+  //   console.log(`dark mode is ${darkMode ? 'enabled' : 'disabled'} in Navbar.js`);
+  // }, [darkMode]);
+
   return (
     <nav>
       <div className={style.navigationPanel}>
@@ -18,6 +24,9 @@ const Navbar = () => {
             {item.name}
           </Link>
         ))}
+        <button className={style.nav_button} onClick={() => setDarkMode(!darkMode)}>
+          {darkMode ? "Enable Light Mode" : "Enable Dark Mode"}
+        </button>
       </div>
     </nav>
   );

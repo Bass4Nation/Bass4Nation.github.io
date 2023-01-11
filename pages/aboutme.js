@@ -6,7 +6,7 @@ const infoList = [
         content: 'I am currently studying at the University of Østfold in Halden, Norway. I am studying to become a software developer.',
         images: [
             {
-                src: '/images/uo.png',
+                src: '/images/Hogskolesenteretihalden.jpg',
                 alt: 'University of Østfold logo',
                 width: 200,
                 height: 200,

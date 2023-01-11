@@ -1,14 +1,31 @@
-
 .navigationPanel {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: #333;
-  color: #fff;
+  background: linear-gradient(315deg, #f0f0f0, #cacaca);
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  padding: 1rem;
 }
 
-.nav_item{
-    font-size: large;
+.nav_item {
+  border-radius: 10px;
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+}
+.nav_item:hover {
+  box-shadow: -5px -5px 10px #c5c5c5;
+  transition: 1s;
+}
+
+.nav_button {
+  border-radius: 10px;
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+  border: none;
 }
