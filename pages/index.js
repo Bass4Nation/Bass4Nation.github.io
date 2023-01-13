@@ -2,6 +2,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import style from '../styles/Index.module.css'
 import Headtitle from '../components/Headtitle'
+import i18n from '../i18n'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,6 +11,9 @@ export default function Home() {
     <>
       <Headtitle title="Bass4Nation's portefolio site - bass4nation.github.io" />
       <main className={style.main}>
+        <section>
+          <p>{i18n.t('key')}</p>
+        </section>
         <section>
           <h1>Hi, I&apos;m Bass4Nation and also Kristoffer S Søderkvist</h1>
           <p>

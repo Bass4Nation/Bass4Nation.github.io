@@ -6,6 +6,7 @@ import style from "../styles/Navbar.module.css";
 const navItemList = [
   { name: "Home", href: "/" },
   { name: "About me", href: "/aboutme" },
+  { name: "My Github", href: "/github" },
   { name: "My websites", href: "/websites" },
   { name: "My Anime watchlist", href: "/anime" },
 ];
