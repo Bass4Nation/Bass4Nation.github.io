@@ -8,7 +8,7 @@ const navItemList = [
   { name: "About me", href: "/aboutme" },
   { name: "My Github", href: "/github" },
   { name: "My websites", href: "/websites" },
-  { name: "My Anime watchlist", href: "/anime" },
+  { name: "My CV", href: "/cv" },
 ];
 
 const Navbar = ({ darkMode, setDarkMode }) => {

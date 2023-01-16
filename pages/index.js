@@ -1,10 +1,7 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import style from '../styles/Index.module.css'
-import Headtitle from '../components/Headtitle'
-import i18n from '../i18n'
-
-const inter = Inter({ subsets: ['latin'] })
+import Image from "next/image";
+import style from "../styles/Index.module.css";
+import Headtitle from "../components/Headtitle";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,18 +9,27 @@ export default function Home() {
       <Headtitle title="Bass4Nation's portefolio site - bass4nation.github.io" />
       <main className={style.main}>
         <section>
-          <p>{i18n.t('key')}</p>
+          <h1>Hi Kristoffer S Søderkvist and is a Junior Developer</h1>
         </section>
         <section>
-          <h1>Hi, I&apos;m Bass4Nation and also Kristoffer S Søderkvist</h1>
+          <h1>About this page</h1>
           <p>
-            I&apos;m a 25 year old student from Norway, currently studying at the University of Østfold in Halden, Norway.
+            {" "}
+            This is a portfolio page that I will use when searching for a job.
           </p>
+          <p>This page is made with Next.js which is server side React.js</p>
+        </section>
+        <section>
+          <h1>Little bit about me</h1>
+          <Link href="aboutme">More about me here</Link>
           <p>
-            I&apos;m currently studying to become a software developer, and I&apos;m also a gamer.
+            I am 25 years old, almost 100% finished with my study at University
+            of Østfold in Halden. Have currently 170 of 180 points for
+            completion of a bachelor and is completing my last lecture this
+            spring/summer 2023.
           </p>
         </section>
       </main>
     </>
-  )
+  );
 }

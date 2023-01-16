@@ -1,10 +1,13 @@
 import { useGitCommit } from "../hooks/useGitCommit";
 import convertTimeToReadable from "../helpers/convertTimeToReadable";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 const GithubCard = ({ repo }) => {
-  const { commit } = useGitCommit(repo.owner.login, repo.name);
-
-  console.log(commit);
+//   const { commit } = useGitCommit(repo.owner.login, repo.name);
+  const router = useRouter()
+  //   console.log(commit);
 
   return (
     <>
@@ -16,8 +19,17 @@ const GithubCard = ({ repo }) => {
         <p>Main Language: {repo.language}</p>
         <p>Size: {repo.size}</p>
         <p>Default branch: {repo.default_branch}</p>
+        <Link  href={`/github/${repo.id}`}
+              onClick={(e) => {
+                e.preventDefault()
+                router.push({
+                  pathname: '/github/[id]',
+                  query: { data: repo.id },
+                },`/github/${repo.id}`)
+              }}>Read more</Link>
       </li>
-      <section>
+
+      {/* <section>
         {commit &&
           commit.map((commit) => (
             <li key={commit.sha}>
@@ -28,7 +40,7 @@ const GithubCard = ({ repo }) => {
               </p>
             </li>
           ))}
-      </section>
+      </section> */}
     </>
   );
 };

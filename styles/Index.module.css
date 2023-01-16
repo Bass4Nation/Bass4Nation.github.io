@@ -1,0 +1,43 @@
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+
+.main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+    background: linear-gradient(315deg, #f0f0f0, #cacaca);
+    transition: 1s;
+}
+
+.main section:hover{
+    box-shadow: -5px -5px 10px #c5c5c5;
+    transition: 1s;
+}
+
+.main section p  {
+    background-color: transparent;
+}
+
+.main section h1{
+    background-color: transparent;
+}
+
+.main section h2{
+    background-color: transparent;
+}
+
+.main section a{
+    background-color: transparent;
+}

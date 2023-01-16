@@ -5,9 +5,13 @@ const convertTimeToReadable = (time) => {
 
   const minutes = date.getMinutes();
 
-  const seconds = date.getSeconds();
+  const month = date.getMonth() + 1;
 
-  return `${hours}:${minutes}:${seconds}`;
+  const day = date.getDate();
+
+  const year = date.getFullYear();
+
+  return `${day}:${month}:${year} ${hours}:${minutes}`;
 };
 
 export default convertTimeToReadable;
