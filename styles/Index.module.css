@@ -2,11 +2,13 @@
   --loading_color: black;
   --loading_color_2: #e5e5e5;
   --box_edges: 10px;
+  
 }
 
 .main {
   display: flex;
   flex-direction: column;
+  background-color: transparent;
 }
 
 .sectionDisplayed {

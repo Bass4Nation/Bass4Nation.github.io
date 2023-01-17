@@ -24,7 +24,8 @@
     "main"
     "footer";
   grid-gap: 10px;
-  background: linear-gradient(315deg, var(--bg-color-1), var(--bg-color-2));
+  /* background: linear-gradient(315deg, var(--bg-color-1), var(--bg-color-2)); */
+  background-color: transparent;
   box-shadow: -17px -17px 35px var(--bg-color-shadow-1),
     17px 17px 35px var(--bg-color-shadow-2);
   padding: 1rem;
@@ -43,7 +44,5 @@
       "footer ";
 
     grid-gap: 10px;
-    ;
   }
-
 }
