@@ -1,43 +1,69 @@
-
-
-.main{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    
+.root {
+  --loading_color: black;
+  --loading_color_2: #e5e5e5;
+  --box_edges: 10px;
 }
 
-.main section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
-    background: linear-gradient(315deg, #f0f0f0, #cacaca);
-    transition: 1s;
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
-.main section:hover{
-    box-shadow: -5px -5px 10px #c5c5c5;
-    transition: 1s;
+.sectionDisplayed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: var(--box_edges);
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  background: linear-gradient(315deg, #f0f0f0, #cacaca);
+  transition: 1s;
 }
 
-.main section p  {
-    background-color: transparent;
+.sectionDisplayed:hover {
+  box-shadow: -5px -5px 10px #c5c5c5;
+  transition: 1s;
 }
 
-.main section h1{
-    background-color: transparent;
+.sectionDisplayed p {
+  background-color: transparent;
 }
 
-.main section h2{
-    background-color: transparent;
+.sectionDisplayed h1 {
+  background-color: transparent;
 }
 
-.main section a{
-    background-color: transparent;
+.sectionDisplayed h2 {
+  background-color: transparent;
+}
+
+.sectionDisplayed a {
+  background-color: transparent;
+}
+
+.loading_bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--loading_color_2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loading_bar_fill {
+  width: 0;
+  height: 100%;
+  background-color: var(--loading_color);
+}
+.button_pause {
+  background-color: transparent;
+  border-radius: var(--box_edges);
+  outline: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--loading_color);
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  transition: 1s;
+  align-items: center;
 }
