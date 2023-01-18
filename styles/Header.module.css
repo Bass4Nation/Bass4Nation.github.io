@@ -2,13 +2,9 @@
 .main_title {
     font-size: x-large;
     font-weight: bold;
-    color: #000;
+    color: var(--text-color);
     text-align: center;
     margin: 0;
     padding: 0;
-    transition: 1s;
-}
-.main_title:hover {
-    color: #fff;
     transition: 1s;
 }

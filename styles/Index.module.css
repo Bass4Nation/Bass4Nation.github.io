@@ -2,7 +2,6 @@
   --loading_color: black;
   --loading_color_2: #e5e5e5;
   --box_edges: 10px;
-  
 }
 
 .main {
@@ -20,7 +19,7 @@
   padding: 1rem;
   border-radius: var(--box_edges);
   box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
-  background: linear-gradient(315deg, #f0f0f0, #cacaca);
+  background: linear-gradient(315deg, #f0f0f0, var(--bg-color-1));
   transition: 1s;
 }
 
@@ -60,6 +59,7 @@
 }
 .button_pause {
   background-color: transparent;
+  color: red;
   border-radius: var(--box_edges);
   outline: none;
   cursor: pointer;
@@ -68,4 +68,23 @@
   box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
   transition: 1s;
   align-items: center;
+}
+
+.button_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;  
+}
+
+.button_section button {
+    background-color: transparent;
+    color: var(--text_color);
+    border-radius: var(--box_edges);
+    font-size: 1.5rem;
+    box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+
+
+
 }

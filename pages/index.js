@@ -7,9 +7,11 @@ import { useState, useEffect } from "react";
 // Sections to be displayed
 const sections = [
   {
+    id: 0,
     title: "Hi Kristoffer S Søderkvist and is a Junior Developer",
   },
   {
+    id: 1,
     title: "About this page",
     text: [
       "This is a portfolio page that I will use when searching for a job.",
@@ -17,6 +19,7 @@ const sections = [
     ],
   },
   {
+    id: 2,
     title: "Little bit about me",
     text: [
       "I am 25 years old, almost 100% finished with my study at University of Østfold in Halden. ",
@@ -35,7 +38,7 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false); // new state variable to track whether the bar is paused or not
   const [intervalId, setIntervalId] = useState(null); // new state variable to track the intervalId
   const [startTime, setStartTime] = useState(null); // new state variable to track the start time
-  const [prevLoadingPercentage, setPrevLoadingPercentage] = useState(0);
+  const [currentLoadingProcentage, setCurrentLoadingProcentage] = useState(0);
 
   useEffect(() => {
     let interval;
@@ -49,15 +52,27 @@ export default function Home() {
       };
       interval = setInterval(updateLoading, 50);
       setIntervalId(interval);
-    } else {
-      clearInterval(intervalId);
-      setIntervalId(null);
-      setPrevLoadingPercentage(loadingPercentage); // save current percentage in state variable
     }
+    return () => {
+      clearInterval(interval);
+      setCurrentLoadingProcentage(loadingPercentage);
+    };
   }, [isPaused, startTime]);
 
   const nextSection = () => {
-    setCurrentSection((currentSection) => (currentSection + 1) % sections.length);
+    setCurrentSection(
+      (currentSection) => (currentSection + 1) % sections.length
+    );
+    setLoadingPercentage(0);
+    setStartTime(null);
+  };
+
+  const prevSection = () => {
+    if(currentSection === 0) {
+      setCurrentSection(sections.length - 1);
+    } else {
+    setCurrentSection((currentSection) =>   (currentSection - 1) % sections.length);
+    }
     setLoadingPercentage(0);
     setStartTime(null);
   };
@@ -65,17 +80,20 @@ export default function Home() {
   useEffect(() => {
     if (!isPaused) {
       const timeout = setTimeout(() => {
+        setLoadingPercentage(currentLoadingProcentage);
         clearInterval(intervalId);
         setIntervalId(null);
         nextSection();
       }, 10000);
-      setLoadingPercentage(prevLoadingPercentage); // use prevLoadingPercentage when you continue
+      setCurrentLoadingProcentage(loadingPercentage);
       return () => {
         clearTimeout(timeout);
       };
     }
   }, [isPaused, intervalId]);
-  // console.log(loadingPercentage);
+
+  console.log(loadingPercentage);
+  console.log(currentLoadingProcentage);
 
   return (
     <>
@@ -97,13 +115,12 @@ export default function Home() {
               style={{ width: `${loadingPercentage}%` }}
             />
           </section>
-          <section>
-            <button
-              className={style.button_pause}
-              onClick={() => setIsPaused(!isPaused)}
-            >
+          <section className={style.button_section}>
+            <button onClick={prevSection}>Prev</button>
+            <button onClick={() => setIsPaused(!isPaused)}>
               {isPaused ? "Continue" : "Pause"}
             </button>
+            <button onClick={nextSection}>Next</button>
           </section>
         </section>
       </main>

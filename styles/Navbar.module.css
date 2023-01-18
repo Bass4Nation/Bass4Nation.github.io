@@ -23,8 +23,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background: linear-gradient(315deg, #f0f0f0, #cacaca);
-  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  background: linear-gradient(315deg, var(--bg-color-1), var(--bg-color-2));
+  box-shadow: -17px -17px 35px var(--bg-color-shadow-1), 17px 17px 35px var(--bg-color-shadow-2);
   padding: 1rem;
 }
 
@@ -34,6 +34,7 @@
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: 1s;
+  color: var(--text-color);
 }
 .nav_item:hover {
   box-shadow: -5px -5px 10px #c5c5c5;
@@ -47,7 +48,7 @@
   padding: 0.5rem 1rem;
   transition: 1s;
   border: none;
-  color: var(--bg-color-1);
+  color: var(--text-color);
 }
 
 .nav_button:hover {
