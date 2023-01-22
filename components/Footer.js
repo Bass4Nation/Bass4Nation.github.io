@@ -1,9 +1,12 @@
 import style from "../styles/Footer.module.css"
 
 
-const Footer = () => {
+const Footer = ({isMobile}) => {
+
+  const footer = isMobile ? style.footer_mobile : style.footer_desktop
+
   return (
-    <footer className={style.footer}>
+    <footer className={footer}>
       <p>
         E-mail: <a href="mailTo:bass4nation@gmail.com">bass4nation@gmail.com</a>
       </p>

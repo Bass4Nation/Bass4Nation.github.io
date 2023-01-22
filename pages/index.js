@@ -92,8 +92,8 @@ export default function Home() {
     }
   }, [isPaused, intervalId]);
 
-  console.log(loadingPercentage);
-  console.log(currentLoadingProcentage);
+  // console.log(loadingPercentage);
+  // console.log(currentLoadingProcentage);
 
   return (
     <>
