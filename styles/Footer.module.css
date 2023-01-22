@@ -1,13 +1,11 @@
 
-.footer {
+.footer_desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
     background: linear-gradient(315deg, var(--bg-color-1), var(--bg-color-2));
     box-shadow: -17px -17px 35px var(--bg-color-shadow-1), 17px 17px 35px #fbfbfb;
     padding: 1rem; 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    max-height: fit-content;    
 }
 
 .footer_desktop p {
@@ -25,6 +23,7 @@
     padding: 0.5rem 1rem;
     transition: 1s;
     color: var(--text-color);
+    background-color: transparent;
 }
 
 .footer_desktop a:hover{
