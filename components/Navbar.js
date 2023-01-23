@@ -64,7 +64,7 @@ const Navbar = ({ darkMode, setDarkMode, isMobile }) => {
         </section>
 
         <section className={mobileMenu}>
-          <button className={style.nav_button_exit} onClick={toggleMenu}>
+          <button className={style.nav_item_mobile} onClick={toggleMenu}>
             {isMenuOpen ? "X" : null}
           </button>
           {navItemList.map((item) => (
@@ -77,7 +77,7 @@ const Navbar = ({ darkMode, setDarkMode, isMobile }) => {
             </Link>
           ))}
           <button
-            className={style.nav_button_mobile}
+            className={style.nav_item_mobile}
             onClick={() => setDarkMode(!darkMode)}
           >
             {darkMode ? "Enable Light Mode" : "Enable Dark Mode"}

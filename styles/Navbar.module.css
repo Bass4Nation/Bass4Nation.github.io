@@ -78,11 +78,25 @@
 
 
 .navigationPanel_mobile{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "logo menu" "logo menu";
-  background: linear-gradient(315deg, var(--bg-color-1), var(--bg-color-2));;
+display: grid;
+/* justify-content: center; */
+align-items: center;
+}
+
+.nav_item_mobile{
+  border-radius: 10px;
+  box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: 1s;
+  color: var(--text-color);
+  text-align: center;
+   
+}
+
+.nav_item_mobile:hover{
+  box-shadow: -5px -5px 10px #c5c5c5;
+  transition: 1s;
 }
 
 
