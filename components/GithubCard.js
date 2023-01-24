@@ -3,6 +3,7 @@ import convertTimeToReadable from "../helpers/convertTimeToReadable";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import cardstyle from "../styles/GithubCard.module.css";
 
 const GithubCard = ({ repo }) => {
 //   const { commit } = useGitCommit(repo.owner.login, repo.name);
@@ -11,14 +12,14 @@ const GithubCard = ({ repo }) => {
 
   return (
     <>
-      <li key={repo.id}>
+      <li key={repo.id} className={cardstyle.card_item}>
         <a href={repo.html_url}>{repo.name}</a>
         {repo.description !== null && <p>Description: {repo.description}</p>}
-        <p>Created at: {convertTimeToReadable(repo.created_at)}</p>
-        <p>Updated at: {convertTimeToReadable(repo.updated_at)}</p>
+        {/* <p>Created at: {convertTimeToReadable(repo.created_at)}</p> */}
+        <p>Last Updated at : {convertTimeToReadable(repo.updated_at)}</p>
         <p>Main Language: {repo.language}</p>
-        <p>Size: {repo.size}</p>
-        <p>Default branch: {repo.default_branch}</p>
+        {/* <p>Size: {repo.size}</p> */}
+        {/* <p>Default branch: {repo.default_branch}</p> */}
         <Link  href={`/github/${repo.id}`}
               onClick={(e) => {
                 e.preventDefault()

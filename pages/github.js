@@ -2,7 +2,7 @@ import GithubCard from "../components/GithubCard";
 import GithubProfile from "../components/GithubProfile";
 import { useGit } from "../hooks/useGithub";
 import Headtitle from "../components/Headtitle";
-
+import cardstyle from "../styles/GithubCard.module.css";
 const Github = () => {
   const { user, allRepo } = useGit();
 
@@ -20,7 +20,7 @@ const Github = () => {
       <section>
         <p>Here&apos;s a list of my GitHub repositories that are public:</p>
         <p>Not every repo is complete but here you can see some of my crafts</p>
-        <ul>
+        <ul className={cardstyle.all_cards}>
           {allRepo &&
             allRepo.map((repo) => <GithubCard repo={repo} key={repo.id} />)}
         </ul>

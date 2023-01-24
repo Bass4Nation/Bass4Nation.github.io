@@ -7,12 +7,13 @@
   --button-color: black;
 }
 .darkmode {
-  --bg-color-1: #1e1e1e;
-  --bg-color-2: #0d0d0d;
-  --bg-color-shadow-1: #0a0a0a;
-  --bg-color-shadow-2: #2a2a2a;
-  --text-color: white;
-  --button-color: white;
+  --bg-color-1: #03001C;
+  --bg-color-2: #301E67;
+  --bg-color-shadow-1: #301E67;
+  --bg-color-shadow-2: #5B8FB9;
+  --text-color: #B6EADA;
+  --button-color: #B6EADA;
+  --items-color: red;
 }
 
 .layout {

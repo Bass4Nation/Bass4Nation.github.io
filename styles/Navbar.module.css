@@ -1,4 +1,4 @@
-.root {
+/* .root {
   --bg-color-1: #f0f0f0;
   --bg-color-2: #cacaca;
   --bg-color-shadow-1: #c5c5c5;
@@ -14,7 +14,7 @@
   --bg-color-shadow-2: #2a2a2a;
   --text-color: white;
   --button-color: white;
-}
+} */
 
 
 .navigationPanel {
@@ -48,6 +48,7 @@
 
 
 .nav_item {
+  background-color: var(--items-color);
   border-radius: 10px;
   box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
   text-decoration: none;
@@ -94,10 +95,7 @@ align-items: center;
    
 }
 
-.nav_item_mobile:hover{
-  box-shadow: -5px -5px 10px #c5c5c5;
-  transition: 1s;
-}
+
 
 
 .navigationPanel_mobile a {
