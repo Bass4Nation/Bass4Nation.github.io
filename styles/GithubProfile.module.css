@@ -1,0 +1,32 @@
+
+
+
+
+.profileCard{
+    display: grid;
+    box-shadow: -17px -17px 35px var(--bg-color-shadow-1), 17px 17px 35px var(--bg-color-shadow-2);
+    border-radius: 10px;
+    perspective: 1000px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.profileCard p {
+    padding: 0.5rem;
+    /* box-shadow: -17px -17px 35px var(--bg-color-shadow-1); */
+    perspective: 1000px;
+    color: var(--text-color);
+}
+.profileCard img {
+    border-radius: 10px 10px 0 0;
+    box-shadow: -17px 1px 35px var(--bg-color-shadow-1);
+}
+
+.profileCard a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    box-shadow: -17px -17px 35px var(--bg-color-shadow-1);
+    border-radius: 10px;
+}

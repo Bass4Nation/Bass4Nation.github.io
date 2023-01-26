@@ -6,12 +6,13 @@
   padding-top: 1rem;
 }
 
-.card_item {
+/* .card_item {
   display: grid;
   border: solid 1px #cacaca;
   border-radius: 10px;
   box-shadow: -17px -17px 35px var(--bg-color-shadow-1),
     17px 17px 35px var(--bg-color-shadow-2);
+  perspective: 1000px;
 }
 
 .card_item:hover {
@@ -36,6 +37,40 @@
 
 .card_item p {
   padding: 0.5rem;
+}
+
+ */
+
+.front {
+  /* styles for front face */
+  display: grid;
+  border: solid 1px #cacaca;
+  border-radius: 10px;
+  box-shadow: -17px -17px 35px var(--bg-color-shadow-1),
+    17px 17px 35px var(--bg-color-shadow-2);
+  perspective: 1000px;
+  text-align: center;
+}
+
+.back {
+  /* styles for back face */
+  display: grid;
+  border: solid 1px #cacaca;
+  border-radius: 10px;
+  box-shadow: -17px -17px 35px var(--bg-color-shadow-1),
+    17px 17px 35px var(--bg-color-shadow-2);
+  perspective: 1000px;
+  color: var(--text-color);
+}
+.back h2 {
+  text-align: center;
+}
+.back a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--text-color);
+  border: solid 1px var(--text-color);
+  background-color: rgb(236, 236, 236);
 }
 
 @media (min-width: 600px) {
