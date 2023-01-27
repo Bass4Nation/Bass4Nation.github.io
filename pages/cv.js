@@ -1,6 +1,9 @@
+import Headtitle from "../components/HeadTitle";
+
 const CV = () => {
   return (
     <>
+    <Headtitle title="CV" />
         <section>
           <h1>Here is my resume</h1>
           <p>Name: Kristoffer Snopestad Søderkvist</p>

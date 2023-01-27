@@ -9,6 +9,8 @@ const navItemList = [
   { name: "My Github", href: "/github" },
   { name: "My websites", href: "/websites" },
   { name: "My CV", href: "/cv" },
+  {name: "Bachelor Thesis", href: "/bachelor"},
+  // { name: "Contact me", href: "/contactme"},
 ];
 
 const Navbar = ({ darkMode, setDarkMode, isMobile }) => {

@@ -14,7 +14,7 @@ const GithubCard = ({ repo }) => {
 
   const cardFace = () => {
     return (
-      <section className={styles.cardFace}>
+      <section className={styles.cardFace} >
         <section className={styles.front} key={repo.id}>
           <h2>{repo.name}</h2>
         </section>

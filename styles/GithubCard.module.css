@@ -50,6 +50,10 @@
     17px 17px 35px var(--bg-color-shadow-2);
   perspective: 1000px;
   text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
+  
 }
 
 .back {
@@ -61,6 +65,9 @@
     17px 17px 35px var(--bg-color-shadow-2);
   perspective: 1000px;
   color: var(--text-color);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  cursor: pointer;
 }
 .back h2 {
   text-align: center;

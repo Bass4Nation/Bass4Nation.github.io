@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Headtitle from '../components/HeadTitle';
 
 const infoList = [
     {
@@ -46,6 +47,7 @@ const infoList = [
 const AboutMe = () => {
   return (
     <div>
+        <Headtitle title="About Me" />
       <h1>About Me</h1>
 
       <section>

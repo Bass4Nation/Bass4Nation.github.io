@@ -1,6 +1,9 @@
+import Headtitle from "../components/Headtitle";
+
 const websites = () => {
   return (
-    <div>
+    <section>
+      <Headtitle title="Websites" />
       <h1>
         Here is a list on other webpages I have worked on. Just for fun :)
       </h1>
@@ -11,7 +14,7 @@ const websites = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 

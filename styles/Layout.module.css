@@ -13,7 +13,7 @@
   --bg-color-shadow-2: #5B8FB9;
   --text-color: #B6EADA;
   --button-color: #B6EADA;
-  --items-color: red;
+  --items-color: rgb(76, 0, 255);
 }
 
 .layout {
