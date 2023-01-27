@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Headtitle from '../components/HeadTitle';
+import Headtitle from '../components/Headtitle';
 
 const infoList = [
     {
