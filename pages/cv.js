@@ -1,4 +1,4 @@
-import Headtitle from "../components/HeadTitle";
+import Headtitle from "../components/Headtitle";
 
 const CV = () => {
   return (

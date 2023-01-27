@@ -3,7 +3,7 @@
 // import { useGithubRepo } from "../../hooks/useGithubRepo";
 // import { useEffect } from "react";
 // import { useGitCommit } from "../../hooks/useGitCommit";
-import Headtitle from "../../components/HeadTitle";
+import Headtitle from "../../components/Headtitle";
 import Link from "next/link";
 import style from "../../styles/GithubRepo.module.css";
 import convertTimeToReadable from "../../helpers/convertTimeToReadable";

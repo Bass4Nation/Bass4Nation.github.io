@@ -1,5 +1,4 @@
-import Headtitle from "../components/HeadTitle";
-import axios from "axios";
+import Headtitle from "../components/Headtitle";
 
 const youtubeVideos = [
   {
@@ -14,19 +13,10 @@ const youtubeVideos = [
 
 const Bachelor = () => {
 
-  const data = { name: 'John Doe', age: 30 };
-
-  const handleSubmit = async () => {
-    const res = await axios.post('/api/hello', data);
-    console.log(res.data);
-  };
-
-
   return (
     <section>
         <Headtitle title="Bachelor Thesis" />
       <h1>Bachelor</h1>
-      <button onClick={handleSubmit}>Write to JSON</button>
       <p>This page is about my bachelor.</p>
       <section>
         <h2>My bachelor assignment</h2>
