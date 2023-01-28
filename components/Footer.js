@@ -5,6 +5,9 @@ const Footer = ({isMobile}) => {
 
   const footer = isMobile ? style.footer_mobile : style.footer_desktop
 
+  
+
+
   return (
     <footer className={footer}>
       <p>
@@ -16,6 +19,7 @@ const Footer = ({isMobile}) => {
       <p>
         Github: <a href="https://github.com/Bass4Nation">Bass4Nation</a>
       </p>
+      {/* <input type="button" value={languageText} onClick={changeLanguage} /> */}
     </footer >
   );
 };

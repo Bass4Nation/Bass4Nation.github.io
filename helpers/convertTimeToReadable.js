@@ -1,15 +1,18 @@
+import addZeroToNumber from "./addZeroToNumber";
+
 const convertTimeToReadable = (time) => {
   const date = new Date(time);
 
-  const hours = date.getHours();
+  const hours = addZeroToNumber(date.getHours());
 
-  const minutes = date.getMinutes();
+  const minutes = addZeroToNumber(date.getMinutes());
 
-  const month = date.getMonth() + 1;
+  const month = addZeroToNumber(date.getMonth() + 1);
 
-  const day = date.getDate();
+  const day = addZeroToNumber(date.getDate());
 
-  const year = date.getFullYear();
+  const year = addZeroToNumber(date.getFullYear());
+
 
   return `${day}:${month}:${year} ${hours}:${minutes}`;
 };

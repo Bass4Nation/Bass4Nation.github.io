@@ -1,162 +1,81 @@
 import Headtitle from "../components/Headtitle";
+import { cvTextEn, cvTextNo } from "./api/data/cv";
 
 const CV = () => {
+  // If you want to use Norwegian text instead of English, change the following line to cvTextNo
+  // Should in the future be changed to a language selector/ switcher
+  const cvText = cvTextEn;
+
+
   return (
     <>
-    <Headtitle title="CV" />
-        <section>
-          <h1>Here is my resume</h1>
-          <p>Name: Kristoffer Snopestad Søderkvist</p>
-          <p>Address: Ertevannveien, 1894 Rakkestad</p>
-          <p>Phone: +47 980 37 897</p>
-          <p>
-            Email:
-            <a href="mailTo:bass4nation@gmail.com">
-              bass4nation@gmail.com
-            </a>{" "}
-          </p>
-          <p>
-            LinkedIn:
-            <a
-              href="https://www.linkedin.com/in/kristoffer-søderkvist-528229179/ "
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Kristoffer Snopestad Søderkvist
-            </a>
-          </p>
-          <p>
-            Github:
-            <a
-              href="https://github.com/Bass4Nation"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bass4Nation
-            </a>
-          </p>
-          <p>
-            Portfolio:
-            <a
-              href="https://bass4nation.github.io/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bass4Nation
-            </a>
-          </p>
-        </section>
-        <section>
-          <h1>Education</h1>
-          <p>
-            <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-            OsloMet - Oslo Metropolitan University
-          </p>
-          <p>
-            <b>2016 - 2019</b> - Bachelor of Science in Computer Science,
-            OsloMet - Oslo Metropolitan University
-          </p>
-          <p>
-            <b>2013 - 2016</b> - Bachelor of Science in Computer Science,
-            OsloMet - Oslo Metropolitan University
-          </p>
-        </section>
-        <section>
-            <h1>Work Experience</h1>
+      <Headtitle title="CV" />
+      <section>
+        <h1>Here is my resume</h1>
+        {cvText.map((cv) => (
+          <section key={cv.Name}>
+            <p>Name: {cv.Name}</p>
+            <p>Address: {cv.Address}</p>
+            <p>Phone: <a href={"tel:"+ cv.Phone}>{cv.Phone}</a></p>
             <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
+              Email:
+              <a href={"mailTo:" + cv.Email}>{cv.Email}</a>
             </p>
             <p>
-                <b>2016 - 2019</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
+              LinkedIn:
+              <a href={cv.LinkedIn} target="_blank" rel="noopener noreferrer">
+                {cv.Name}
+              </a>
             </p>
             <p>
-                <b>2013 - 2016</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Skills</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
+              Github:
+              <a href={cv.Github} target="_blank" rel="noopener noreferrer">
+                {cv.Username}
+              </a>
             </p>
             <p>
-                <b>2016 - 2019</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
+              Portfolio:
+              <a href={cv.Portfolio} target="_blank" rel="noopener noreferrer">
+                {cv.Portfolio}
+              </a>
             </p>
-            <p>
-                <b>2013 - 2016</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Projects</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-            <p>
-                <b>2016 - 2019</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-            <p>
-                <b>2013 - 2016</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Interests</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>References</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Language</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Driving License</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Other</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Personal Information</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-        <section>
-            <h1>Additional Information</h1>
-            <p>
-                <b>2019 - 2021</b> - Bachelor of Science in Computer Science,
-                OsloMet - Oslo Metropolitan University
-            </p>
-        </section>
-            
-      {/* Bottom under all data */}
+          </section>
+        ))}
+      </section>
+
+      <section>
+        <h1>Education</h1>
+        {cvText[0].Education.map((education) => (
+          <section key={education.id}>
+            <h1>{education.title}</h1>
+            <p>{education.year}</p>
+            <p>{education.text}</p>
+          </section>
+        ))}
+      </section>
+
+      <section>
+        <h1>Work Experience</h1>
+        {cvText[0].WorkExperience.map((workExperience) => (
+          <section key={workExperience.id}>
+            <h1>{workExperience.title}</h1>
+            <p>{workExperience.year}</p>
+            <p>{workExperience.content}</p>
+          </section>
+        ))}
+      </section>
+      <section>
+        <h1>Skills</h1>
+        {cvText[0].Skills.map((skills) => (
+          <section key={skills.id}>
+            <h1>{skills.title}</h1>
+            <p>{skills.year}</p>
+            <p>{skills.content}</p>
+          </section>
+        ))}
+      </section>
+
+
       <section>
         <h1>Download my Resume</h1>
         <a

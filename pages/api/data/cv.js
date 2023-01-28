@@ -1,0 +1,86 @@
+export const cvTextEn = [
+  {
+    Name: "Kristoffer Snopestad Søderkvist",
+    Username: "Bass4Nation",
+    Address: "Ertevannveien 813, 1894 Rakkestad",
+    Phone: "+4798037897",
+    Email: "bass4nation@gmail.com",
+    LinkedIn: "https://www.linkedin.com/in/kristoffer-søderkvist-528229179/",
+    Github: "https://github.com/Bass4Nation",
+    Portfolio: "b4n.no",
+    Education: [
+      {
+        id: 0,
+        title: "Bachelor of Science in Computer Science",
+        year: "2019 - 2023",
+        text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+      },
+      {
+        id: 1,
+        title: "Bachelor of Science in Computer Science",
+        year: "2016 - 2019",
+        text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+      },
+    ],
+    WorkExperience: [
+      {
+        id: 0,
+        title: "Bachelor of Science in Computer Science",
+        year: "2019 - 2021",
+        text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+      },
+    ],
+    Skills: [{}],
+    Projects: [{}],
+    Intrests: [{}],
+    Reference: [{}],
+    Languages: [{}],
+    DrivingLicense: [{}],
+    Other: [{}],
+    PersonalInformation: [{}],
+    AddisionalInformation: [{}],
+  },
+];
+export const cvTextNo = [
+    {
+      Name: "Kristoffer Snopestad Søderkvist",
+      Username: "Bass4Nation",
+      Address: "Ertevannveien 813, 1894 Rakkestad",
+      Phone: "+4798037897",
+      Email: "bass4nation@gmail.com",
+      LinkedIn: "https://www.linkedin.com/in/kristoffer-søderkvist-528229179/",
+      Github: "https://github.com/Bass4Nation",
+      Portfolio: "b4n.no",
+      Education: [
+        {
+          id: 0,
+          title: "Bachelor of Science in Computer test",
+          year: "2019 - 2023",
+          text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+        },
+        {
+          id: 1,
+          title: "Bachelor of Science in Computer Science",
+          year: "2016 - 2019",
+          text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+        },
+      ],
+      WorkExperience: [
+        {
+          id: 0,
+          title: "Bachelor of Science in Computer Science",
+          year: "2019 - 2021",
+          text: "Bachelor of Science in Computer Science, OsloMet - Oslo Metropolitan University",
+        },
+      ],
+      Skills: [{}],
+      Projects: [{}],
+      Intrests: [{}],
+      Reference: [{}],
+      Languages: [{}],
+      DrivingLicense: [{}],
+      Other: [{}],
+      PersonalInformation: [{}],
+      AddisionalInformation: [{}],
+    },
+  ];
