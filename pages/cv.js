@@ -6,7 +6,6 @@ const CV = () => {
   // Should in the future be able to change language selector/ switcher
   const cvText = cvTextEn;
 
-
   return (
     <>
       <Headtitle title="CV" />
@@ -16,7 +15,9 @@ const CV = () => {
           <section key={cv.Name}>
             <p>Name: {cv.Name}</p>
             <p>Address: {cv.Address}</p>
-            <p>Phone: <a href={"tel:"+ cv.Phone}>{cv.Phone}</a></p>
+            <p>
+              Phone: <a href={"tel:" + cv.Phone}>{cv.Phone}</a>
+            </p>
             <p>
               Email:
               <a href={"mailTo:" + cv.Email}>{cv.Email}</a>
@@ -44,6 +45,33 @@ const CV = () => {
       </section>
 
       <section>
+        {cvText[0].Languages.map((languages) => (
+          <section key={languages.id}>
+            <h1>{languages.title}</h1>
+            <p>{languages.text}</p>
+          </section>
+        ))}
+      </section>
+
+      <section>
+        {cvText[0].Platforms.map((platforms) => (
+          <section key={platforms.id}>
+            <h1>{platforms.title}</h1>
+            <p>{platforms.text}</p>
+          </section>
+        ))}
+      </section>
+
+      <section>
+        {cvText[0].Tools.map((tools) => (
+          <section key={tools.id}>
+            <h1>{tools.title}</h1>
+            <p>{tools.text}</p>
+          </section>
+        ))}
+      </section>
+
+      <section>
         <h1>Education</h1>
         {cvText[0].Education.map((education) => (
           <section key={education.id}>
@@ -53,7 +81,6 @@ const CV = () => {
           </section>
         ))}
       </section>
-
       <section>
         <h1>Work Experience</h1>
         {cvText[0].WorkExperience.map((workExperience) => (
@@ -65,33 +92,41 @@ const CV = () => {
         ))}
       </section>
       <section>
-        <h1>Skills</h1>
-        {cvText[0].Skills.map((skills) => (
-          <section key={skills.id}>
-            <h1>{skills.title}</h1>
-            <p>{skills.year}</p>
-            <p>{skills.content}</p>
+        {cvText[0].Intrests.map((intrests) => (
+          <section key={intrests.id}>
+            <h1>{intrests.title}</h1>
+            <p>{intrests.text}</p>
+          </section>
+        ))}
+      </section>
+      <section>
+        <h1>Driving Licenses</h1>
+        {cvText[0].DrivingLicense.map((drivingLicense) => (
+          <section key={drivingLicense.id}>
+            <h1>{drivingLicense.title}</h1>
+            <p>{drivingLicense.text}</p>
+          </section>
+        ))}
+      </section>
+      <section>
+        {cvText[0].AdditionalInformation.map((additionalInformation) => (
+          <section key={additionalInformation.id}>
+            <h1>{additionalInformation.title}</h1>
+            <p>{additionalInformation.text}</p>
           </section>
         ))}
       </section>
 
-
       <section>
         <h1>Download my Resume</h1>
         <a
-          href="downloads/CV_Kristoffer_S_Soderkvist.pdf"
+          href="downloads/CV_Kristoffer_Snopestad_Søderkvist.pdf"
           target="_blank"
           rel="noopener noreferrer"
           download
         >
           <button>Download CV</button>
         </a>
-        <embed
-          src="downloads/CV_Kristoffer_S_Soderkvist.pdf"
-          type="application/pdf"
-          width="100%"
-          height="100%"
-        />
       </section>
     </>
   );
