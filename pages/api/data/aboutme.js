@@ -15,7 +15,7 @@ export const aboutmeText = [
         ]
     },
     {
-        title: 'Work',
+        title: 'Previously work experience',
         content: 'I am currently working as a student assistant at the University of Østfold in Halden, Norway. I am working as a student assistant in the department of computer science.',
         images: [
             {

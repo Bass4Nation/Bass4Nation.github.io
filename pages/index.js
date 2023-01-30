@@ -68,6 +68,10 @@ export default function Home() {
 
   // console.log(loadingPercentage);
   // console.log(currentLoadingProcentage);
+  const multipleText = sections[currentSection].text?.length > 2;
+  const multipleTextParagraphs = sections[currentSection].text?.map((text, index) => (
+    <p key={index}>{text}</p>
+  ));
 
   return (
     <>
@@ -81,7 +85,7 @@ export default function Home() {
                 {sections[currentSection].link.text}
               </Link>
             ) : null}
-            <p>{sections[currentSection].text}</p>
+            {multipleText ? (multipleTextParagraphs) : (<p>{sections[currentSection].text}</p>)}
           </sections>
           <section className={style.loading_bar}>
             <section
