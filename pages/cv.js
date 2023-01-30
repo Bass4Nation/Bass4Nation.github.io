@@ -3,7 +3,7 @@ import { cvTextEn, cvTextNo } from "./api/data/cv";
 
 const CV = () => {
   // If you want to use Norwegian text instead of English, change the following line to cvTextNo
-  // Should in the future be changed to a language selector/ switcher
+  // Should in the future be able to change language selector/ switcher
   const cvText = cvTextEn;
 
 

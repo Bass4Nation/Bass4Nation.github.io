@@ -67,7 +67,7 @@ const Navbar = ({ darkMode, setDarkMode, isMobile }) => {
 
         <section className={mobileMenu}>
           <button className={style.nav_item_mobile} onClick={toggleMenu}>
-            {isMenuOpen ? "X" : null}
+            {isMenuOpen ? "Close Menu" : null}
           </button>
           {navItemList.map((item) => (
             <Link
@@ -91,7 +91,7 @@ const Navbar = ({ darkMode, setDarkMode, isMobile }) => {
 
   // console.log(`window size is ${windowSize} in Navbar.js`);
   // console.log(`isMobile is ${isMobile} in Navbar.js`);
-  console.log(`isMenuOpen is ${isMenuOpen} in Navbar.js`);
+  // console.log(`isMenuOpen is ${isMenuOpen} in Navbar.js`);
 
   return <nav>{isMobile ? navBarMobile() : navBarDesktop()}</nav>;
 };
