@@ -7,14 +7,12 @@ const AboutMe = () => {
   return (
     <div>
         <Headtitle title="About Me" />
-      <h1>About Me</h1>
-
       <section>
         {aboutmeText.map((item) => (
             <section key={item.title}>
                 <h2>{item.title}</h2>
                 <p>{item.content}</p>
-                {item.images.map((image) => (
+                {item?.images?.map((image) => (
                     <Image key={image.key} src={image.src} alt={image.alt} width={image.width} height={image.height} />
                 ))}
             </section>

@@ -3,6 +3,7 @@
   --bg-color-2: #cacaca;
   --bg-color-shadow-1: #c5c5c5;
   --bg-color-shadow-2: #fbfbfb;
+  --nav-element-color: #8d7abb;
   --text-color: black;
   --button-color: black;
 }
@@ -11,6 +12,7 @@
   --bg-color-2: #301E67;
   --bg-color-shadow-1: #301E67;
   --bg-color-shadow-2: #5B8FB9;
+  --nav-element-color: #8d7abb;
   --text-color: #B6EADA;
   --button-color: #B6EADA;
   --items-color: rgb(76, 0, 255);

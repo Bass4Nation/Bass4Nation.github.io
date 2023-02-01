@@ -37,7 +37,7 @@
 
 .navigationPanel button {
   color: var(--button-color);
-  background: transparent;
+  background: var(--nav-element-color);
   border: none;
   font-size: 1.5rem;
   font-weight: 600;
@@ -48,7 +48,7 @@
 
 
 .nav_item {
-  background-color: var(--items-color);
+  background: var(--nav-element-color);
   border-radius: 10px;
   box-shadow: -17px -17px 35px #c5c5c5, 17px 17px 35px #fbfbfb;
   text-decoration: none;
