@@ -8,6 +8,12 @@ import Link from "next/link";
 import style from "../../styles/GithubRepo.module.css";
 import convertTimeToReadable from "../../helpers/convertTimeToReadable";
 
+const fetchUserRepos = async (username) => {
+  const response = await fetch(`https://api.github.com/users/${username}/repos`);
+  const repos = await response.json();
+  return repos;
+};
+
 
 const Page = ({ data, commit }) => {
   // const router = useRouter();
@@ -74,8 +80,10 @@ console.log(data);
   );
 };
 
-export const getServerSideProps = async (context) => {
-  const { id } = context.query;
+
+
+export const getStaticProps = async (context) => {
+  const { id } = context.params;
 
   const res = await fetch(`https://api.github.com/repositories/${id}`);
   const data = await res.json();
@@ -88,6 +96,17 @@ export const getServerSideProps = async (context) => {
       data,
       commit
     },
+    revalidate: 60,
+  };
+};
+
+export const getStaticPaths = async () => {
+  const repos = await fetchUserRepos('your-username');
+  const paths = repos.map((repo) => ({ params: { id: repo.id.toString() } }));
+
+  return {
+    paths,
+    fallback: 'blocking',
   };
 };
 
