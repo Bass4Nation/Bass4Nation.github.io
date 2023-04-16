@@ -10,6 +10,8 @@ const navItemList = [
   { name: "My websites", href: "/websites" },
   { name: "My CV", href: "/cv" },
   {name: "Bachelor Thesis", href: "/bachelor"},
+  {name:"Firebase", href: "/firebase"},
+  {name: "Log in", href: "/login"}
   // { name: "Contact me", href: "/contactme"},
 ];
 
