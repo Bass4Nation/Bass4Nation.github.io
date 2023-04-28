@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const serverUrls = "https://algorithm-express-server.vercel.app/";
-const serverCommand = (command) => {
+const serverCommand = (command: string) => {
   if (!command) {
     return serverUrls;
   } else {
@@ -21,7 +21,7 @@ export const useGetFirebaseCollection = () => {
           const elementsArray = response.data;
   
           setElements(elementsArray);
-        } catch (error) {
+        } catch (error: any) {
           console.log("Axios Error:", error);
           console.log(
             "Error details:",
