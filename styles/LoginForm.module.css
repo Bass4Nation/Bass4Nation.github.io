@@ -1,0 +1,147 @@
+.center {
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "loginTitle"
+  "inputform";
+  justify-items: center;
+  align-items: center;
+  border: 3px solid #1a1a1a;
+  border-radius: 5px;
+  width: 50%; 
+  height: 50%;
+  margin: 0 auto; 
+  margin-top: 10%;
+
+}
+.loginTitle{
+  grid-area: loginTitle;
+  justify-self: center;
+  align-self: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+
+.inputForm {
+  grid-area: inputform;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "email-label email"
+    "password-label password"
+    "login-button login-button"
+    "register-button register-button";
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: start;
+  align-items: center;
+}
+
+.emailLabel{
+  grid-area: email-label;
+}
+
+.emailInput {
+  grid-area: email;
+  border: 2px solid #1a1a1a;  
+  border-radius: 10px;
+  background: none;
+  font-size: large;
+  padding: 5px 10px;
+}
+
+.passwordLabel {
+  grid-area: password-label;
+}
+.passwordInput {
+  grid-area: password;
+  border: 2px solid #1a1a1a;  
+  border-radius: 10px;
+  background: none;
+  font-size: large;
+  padding: 5px 10px;
+}
+
+.loginButton  {
+  grid-area: login-button;
+  justify-self: center;
+  /* Remove styling button */
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  background: none;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.registerButton {
+  grid-area: register-button;
+  justify-self: center;
+  /* Remove styling button */
+  border: 2px solid #1a1a1a;
+  border-radius: 10px;
+  background: none;
+  color: #1a1a1a;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: not-allowed;
+  padding: 5px 10px
+
+}
+
+
+@media screen and (max-width: 750px) {
+
+  .center {
+    width: 90%;
+    height: 90%;
+  }
+
+  .inputForm {
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "email-label"
+      "email"
+      "password-label"
+      "password"
+      "login-button"
+      "register-button";
+  }
+
+  .emailLabel{
+    justify-self: center;
+  }
+  
+  .emailInput {
+    justify-self: center;
+    width: 80%;
+  }
+
+  .passwordLabel {
+    justify-self: center;
+  }
+
+  .passwordInput {
+    justify-self: center;
+    width: 80%;
+
+  }
+
+  .loginButton  {
+    justify-self: center;
+  }
+
+
+  .registerButton {
+    justify-self: center;
+  }
+
+
+  
+}
